@@ -1021,7 +1021,11 @@ class NextflowGenerator:
                     container += ":latest"
 
             if container:
-                config_str += '\n\t${}_{}.container = "{}"'.format(p, pid, container)
+                config_str += '\n\twithName: '
+                config_str += '{}_{}'.format(p, pid)
+                config_str += ' {\n\t\tcontainer = '
+                config_str += '"{}"\n'.format(container)
+                config_str += '\t}'
 
         return config_str
 

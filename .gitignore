@@ -1,6 +1,9 @@
 # ignore ide folders
 .idea/
 .vscode/
+build/
+dist/
+flowcraft.egg-info/
 
 # ignore python generated files
 *.pyc
